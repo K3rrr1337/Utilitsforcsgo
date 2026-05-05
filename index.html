@@ -70,6 +70,34 @@
             padding-bottom: 10px;
         }
 
+        /* Стили для рекламного изображения */
+        .promo-container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+        }
+
+        .promo-img {
+            width: 100%;
+            border-radius: 2px;
+            border: 1px solid var(--border-color);
+            display: block;
+            transition: opacity 0.3s;
+        }
+
+        .promo-img:hover {
+            opacity: 0.8;
+        }
+
+        .promo-text {
+            font-size: 10px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
         .main-content {
             flex: 0 1 800px;
             display: flex;
@@ -163,19 +191,10 @@
             line-height: 1.6;
         }
 
-        .injection-guide ol li b { color: var(--text-main); }
-
         .screenshots-grid img {
             width: 100%;
             border: 1px solid var(--border-color);
             margin-bottom: 10px;
-        }
-
-        .credit-item {
-            display: flex;
-            justify-content: space-between;
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border-color);
         }
 
         .req-table { width: 100%; font-size: 13px; border-collapse: collapse; text-align: left; }
@@ -233,8 +252,15 @@
         <aside class="side-column">
             <div class="side-card">
                 <h3 id="ui-side-ads">Advertising</h3>
-                <div style="height: 150px; background: rgba(255,255,255,0.02); display: flex; align-items: center; justify-content: center; color: #444; font-size: 10px; border: 1px dashed #222; text-align: center;">
-                    PROMO SPACE<br>@kerrr1337
+                <!-- Рекламный блок с изображением и ссылкой -->
+                <div class="promo-container">
+                    <a href="https://t.me/kerrr1337" target="_blank">
+                        <img src="https://cdn.discordapp.com/attachments/1496981827209003010/1501275264494080171/photo_2026-05-05_22-08-38.jpg?ex=69fb7b0b&is=69fa298b&hm=ec4888f7542b966e0b95b97b6251c7cc4c30131c325a6c60d7a63bd8d3aa8c53&" alt="Promo" class="promo-img">
+                    </a>
+                    <div class="promo-text">
+                        Sponsorship & Promo<br>
+                        <span style="color: var(--accent-color);">@kerrr1337</span>
+                    </div>
                 </div>
             </div>
             <div class="side-card">
@@ -258,11 +284,7 @@
                 <div class="injection-guide">
                     <h4 id="ui-guide-title">Deployment Guide:</h4>
                     <ol id="ui-guide-list">
-                        <li>Запустите целевой процесс (Engine) и дождитесь инициализации.</li>
-                        <li>Загрузите <b>библиотеку (DLL)</b> или <b>установщик</b> выше.</li>
-                        <li>Используйте стандартный метод маппинга для подключения модуля.</li>
-                        <li>Убедитесь, что процесс <b>csgo.exe</b> выбран в качестве целевого.</li>
-                        <li>Вызовите интерфейс утилиты (клавиша <b>INSERT</b> или <b>HOME</b>).</li>
+                        <!-- Заполняется через JS -->
                     </ol>
                 </div>
             </div>
@@ -277,7 +299,9 @@
 
             <div class="container-card">
                 <h2 id="ui-credits-title">Core Development</h2>
-                <div class="credit-item"><span>kerrr1337</span><span style="color: var(--text-secondary); font-size: 10px;">PROJECT LEAD</span></div>
+                <div style="display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid var(--border-color);">
+                    <span>kerrr1337</span><span style="color: var(--text-secondary); font-size: 10px;">PROJECT LEAD</span>
+                </div>
             </div>
 
             <div class="container-card">
