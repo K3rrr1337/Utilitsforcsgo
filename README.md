@@ -1,4 +1,4 @@
-# NX-Utility | System Overlay & Debugging Tool
+# N1XKAZZMARE | System Overlay & Debugging Tool
 
 ![Status](https://img.shields.io/badge/Status-Stable-success)
 ![Platform](https://img.shields.io/badge/Platform-Windows-blue)
